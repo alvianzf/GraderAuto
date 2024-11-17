@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Code Scanner</title>
+</head>
+
+<body>
+    <h1>Scan Your GitHub Codebase</h1>
+    <form action="/scan" method="POST">
+        <label for="repo_url">GitHub Repository URL:</label>
+        <input type="text" id="repo_url" name="repo_url" placeholder="https://github.com/username/repo" required>
+        <button type="submit">Scan</button>
+    </form>
+
+    {% if feedback %}
+    <h2>Feedback:</h2>
+    <div>
+        <h3>Code Quality:</h3>
+        <ul>
+            {% for item in feedback['Code Quality'] %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div>
+        <h3>Security:</h3>
+        <ul>
+            {% for item in feedback['Security'] %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div>
+        <h3>React Best Practices:</h3>
+        <ul>
+            {% for item in feedback['React Best Practices'] %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% endif %}
+</body>
+
+</html>
