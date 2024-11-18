@@ -6,6 +6,19 @@ This project is a Flask-based web application that scans a GitHub repository for
 [![Flask Version](https://img.shields.io/badge/Flask-3.1.0-green.svg)](https://flask.palletsprojects.com/en/3.1.x/)
 [![GitHub API](https://img.shields.io/badge/GitHub%20API-v3-yellow.svg)](https://docs.github.com/en/rest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Blinker Version](https://img.shields.io/badge/Blinker-1.9.0-blue.svg)](https://pypi.org/project/blinker/)
+[![Certifi Version](https://img.shields.io/badge/Certifi-2024.8.30-green.svg)](https://pypi.org/project/certifi/)
+[![Charset-Normalizer Version](https://img.shields.io/badge/Charset--Normalizer-3.4.0-yellow.svg)](https://pypi.org/project/charset-normalizer/)
+[![Click Version](https://img.shields.io/badge/Click-8.1.7-blue.svg)](https://pypi.org/project/click/)
+[![Idna Version](https://img.shields.io/badge/Idna-3.10-green.svg)](https://pypi.org/project/idna/)
+[![Importlib-Metadata Version](https://img.shields.io/badge/Importlib--Metadata-8.5.0-yellow.svg)](https://pypi.org/project/importlib-metadata/)
+[![ItsDangerous Version](https://img.shields.io/badge/ItsDangerous-2.2.0-blue.svg)](https://pypi.org/project/itsdangerous/)
+[![Jinja2 Version](https://img.shields.io/badge/Jinja2-3.1.4-green.svg)](https://pypi.org/project/Jinja2/)
+[![MarkupSafe Version](https://img.shields.io/badge/MarkupSafe-3.0.2-yellow.svg)](https://pypi.org/project/MarkupSafe/)
+[![Requests Version](https://img.shields.io/badge/Requests-2.32.3-blue.svg)](https://pypi.org/project/requests/)
+[![Urllib3 Version](https://img.shields.io/badge/Urllib3-2.2.3-green.svg)](https://pypi.org/project/urllib3/)
+[![Werkzeug Version](https://img.shields.io/badge/Werkzeug-3.1.3-yellow.svg)](https://pypi.org/project/Werkzeug/)
+[![Zipp Version](https://img.shields.io/badge/Zipp-3.21.0-blue.svg)](https://pypi.org/project/zipp/)
 
 ## 📚 Setup
 
@@ -38,5 +51,5 @@ This project is a Flask-based web application that scans a GitHub repository for
 * Flask for web application framework 🌟
 * GitHub API for fetching repository contents 📁
 * Python for backend logic and analysis 🐍
-* JavaScript and HTML/CSS for frontend user interface 📊
+* JavaScript and HTML/CSS for frontend user interface 📦
 
