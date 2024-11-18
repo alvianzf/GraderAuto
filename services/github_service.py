@@ -34,7 +34,7 @@ def fetch_github_repo(repo_url, token):
     else:
         return None
 
-def fetch_file_content(owner, repo, file_path):
+def fetch_file_content(owner, repo, file_path, token):
     """
     Fetch the content of a specific file from a GitHub repository, including files in subfolders.
     
@@ -47,7 +47,13 @@ def fetch_file_content(owner, repo, file_path):
     - str: The content of the file, or None if the request failed.
     """
     api_url = f"https://api.github.com/repos/{owner}/{repo}/contents/{file_path}"
-    response = requests.get(api_url)
+
+    headers = {
+        'Authorization': f'token {token}',
+        'Accept': 'application/vnd.github.v3+json'
+    }
+    
+    response = requests.get(api_url, headers=headers)
 
     if response.status_code == 200:
         try:
@@ -56,7 +62,6 @@ def fetch_file_content(owner, repo, file_path):
             if isinstance(content, list):  # If it's a directory
                 files = []
                 for item in content:
-                    # Recursively fetch files in subdirectories
                     if item['type'] == 'file':
                         files.append(fetch_file_content(owner, repo, item['path']))
                     elif item['type'] == 'dir':
@@ -92,7 +97,7 @@ def analyze_code_quality(file_content, filename):
     score = 100
     
     # Exclude config files from analysis
-    if filename.endswith(('.config', '.ini', '.json', 'config.js', 'config.ts')):
+    if filename.endswith(('.config', '.ini', '.json', 'config.js', 'config.ts', 'md', '.gitignore', '.mjs', '.lock', 'prettierignore')):
         return {"feedback": feedback, "score": score}
     
     if len(file_content.splitlines()) > 50:
